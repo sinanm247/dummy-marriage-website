@@ -1,0 +1,44 @@
+.page-shell {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(215, 202, 179, 0.18), transparent 24%),
+    radial-gradient(circle at 90% 18%, rgba(199, 210, 193, 0.18), transparent 22%),
+    linear-gradient(180deg, #fbf8f2 0%, #f8f3eb 100%);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(183, 154, 97, 0.16);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 70px;
+    left: -120px;
+  }
+
+  &::after {
+    right: -120px;
+    bottom: 140px;
+  }
+
+  @media (max-width: 768px) {
+    &::before,
+    &::after {
+      width: 210px;
+      height: 210px;
+    }
+  }
+}
+
+.page-main {
+  position: relative;
+  z-index: 10;
+}

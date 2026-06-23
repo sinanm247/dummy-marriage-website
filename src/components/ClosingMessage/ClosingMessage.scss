@@ -1,0 +1,75 @@
+.closing {
+  padding: 4rem 1.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    padding: 4rem 2.5rem 7rem;
+  }
+}
+
+.closing__corner {
+  position: absolute;
+  width: 160px;
+  opacity: 0.75;
+  pointer-events: none;
+
+  &--tl {
+    top: 0;
+    left: 0;
+    /* image is naturally a top-left floral corner — use as-is */
+  }
+
+  &--br {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);   /* flip to become a bottom-right corner */
+  }
+}
+
+.closing__inner {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.closing__arabic {
+  font-size: clamp(1.875rem, 5vw, 2.5rem);
+  color: #8c7650;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.closing__divider {
+  // margin-top: 0.5rem;
+  // margin-bottom: 2.25rem;
+  width: 250px;
+  opacity: 0.92;
+}
+
+.closing__message {
+  font-size: clamp(1.625rem, 4vw, 2.25rem);
+  line-height: 1.25;
+  color: #4d4a43;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.closing__sub {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  color: #756e65;
+  margin-bottom: 3rem;
+}
+
+.closing__signoff {
+  margin-bottom: 0.75rem;
+}
+
+.closing__family {
+  font-size: 1.875rem;
+  color: #8d7853;
+  font-style: italic;
+  font-weight: 400;
+}

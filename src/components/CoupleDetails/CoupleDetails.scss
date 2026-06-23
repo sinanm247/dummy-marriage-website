@@ -1,0 +1,219 @@
+/* Card background colour — used in the gradient so it blends seamlessly */
+$card-bg: #f7f2e9;
+
+.couples {
+  padding: 3rem 1rem;
+
+  @media (min-width: 480px) {
+    padding: 4rem 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 6rem 2.5rem;
+  }
+}
+
+.couples__inner {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* ── Section header ── */
+.couples__header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.couples__kicker {
+  margin-bottom: 1rem;
+}
+
+.couples__title {
+  font-size: clamp(2.5rem, 6vw, 3.875rem);
+  color: var(--sage-dark);
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+/* ── Flower strip divider ── */
+.couples__strip {
+  display: block;
+  // width: 100%;
+  width: 250px;
+  margin: 0.5rem auto 0.5rem;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ── Two-column grid ── */
+.couples__grid {
+  display: grid;
+  gap: 1rem;
+  align-items: start;     /* cards can be different heights */
+
+  @media (min-width: 480px) {
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ── Base card ── */
+.couples__card {
+  position: relative;
+  overflow: hidden;
+  // border-radius: 8px;
+  // border: 1px solid rgba(183, 154, 97, 0.28);
+  // box-shadow: 0 12px 40px rgba(89, 75, 52, 0.12);
+  // background: $card-bg;
+}
+
+/* Portrait card — tall, for the standing couple */
+.couples__card--portrait {
+  height: 540px;
+
+  @media (min-width: 480px) {
+    height: 600px;
+  }
+
+  @media (min-width: 768px) {
+    height: 660px;
+  }
+
+  /* Standing couple fills the card from top to bottom */
+  .couples__card-img {
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+/* Landscape card — used for both cards now */
+.couples__card--landscape {
+  height: 360px;  /* compact on very small screens */
+
+  @media (min-width: 380px) {
+    height: 400px;
+  }
+
+  @media (min-width: 480px) {
+    height: 460px;
+  }
+
+  @media (min-width: 768px) {
+    height: 500px;
+  }
+
+  /* Sitting / landscape couple */
+  .couples__card-img.landscape {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 10px;
+  }
+
+  /* Standing / portrait couple */
+  .couples__card-img.portrait {
+    width: 100%;
+    height: 340px;    /* matches mobile card height minus text area */
+    object-fit: cover;
+    object-position: top;
+
+    @media (min-width: 380px) {
+      height: 380px;
+    }
+
+    @media (min-width: 480px) {
+      height: 440px;
+    }
+
+    @media (min-width: 768px) {
+      height: 480px;
+    }
+  }
+}
+
+/* ── Full-bleed illustration ── */
+.couples__card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Gradient overlay — ivory fade from bottom ── */
+.couples__card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba($card-bg, 0)    0%,
+    rgba($card-bg, 0)    35%,
+    rgba($card-bg, 0.65) 58%,
+    rgba($card-bg, 0.96) 76%,
+    rgba($card-bg, 1)    100%
+  );
+}
+
+/* ── Text — sits above the gradient ── */
+.couples__card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1rem 1.25rem;
+
+  @media (min-width: 480px) {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 1.5rem 1.75rem;
+  }
+}
+
+.couples__card-kicker {
+  margin-bottom: 0.4rem;
+  color: var(--sage);
+
+  @media (min-width: 480px) {
+    margin-bottom: 0.65rem;
+  }
+}
+
+.couples__name {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  color: #4a4540;
+  font-weight: 500;
+
+  @media (min-width: 480px) {
+    font-size: 1.75rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  }
+}
+
+.couples__and {
+  font-size: 1.2rem;
+  color: #9d855a;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0.1rem 0 0.2rem;
+
+  @media (min-width: 480px) {
+    font-size: 1.4rem;
+    margin: 0.15rem 0 0.3rem;
+  }
+}
