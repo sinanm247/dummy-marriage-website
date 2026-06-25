@@ -1,0 +1,78 @@
+/* ── Fixed audio control — bottom-right ─────────────────────── */
+.audio-btn {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 200;
+
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(183, 154, 97, 0.55);
+  background: rgba(250, 247, 241, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #9d855a;
+  cursor: pointer;
+  outline: none;
+
+  box-shadow:
+    0 4px 20px rgba(89, 77, 55, 0.14),
+    0 1px  4px rgba(89, 77, 55, 0.08);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.18s ease;
+
+  /* pulse ring visible only while playing */
+  overflow: visible;
+
+  &:hover {
+    background: rgba(245, 237, 223, 0.97);
+    border-color: rgba(183, 154, 97, 0.85);
+    box-shadow:
+      0 6px 24px rgba(89, 77, 55, 0.20),
+      0 2px  6px rgba(89, 77, 55, 0.12);
+    transform: scale(1.07);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.audio-btn__icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* nudge Play icon visually centered */
+  svg { display: block; }
+}
+
+/* ── Gentle breathing ring when music is playing ── */
+.audio-btn__ripple {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(183, 154, 97, 0);
+  pointer-events: none;
+}
+
+.audio-btn--playing .audio-btn__ripple {
+  animation: audioRipple 2.2s ease-out infinite;
+}
+
+@keyframes audioRipple {
+  0%   { inset: -2px;  border-color: rgba(183, 154, 97, 0.55); }
+  70%  { inset: -12px; border-color: rgba(183, 154, 97, 0.05); }
+  100% { inset: -12px; border-color: rgba(183, 154, 97, 0); }
+}

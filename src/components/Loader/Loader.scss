@@ -165,9 +165,14 @@
 
 .loader__rings-svg {
   display: block;
-  width: 88px;
-  height: 54px;
+  width: 56px;
+  height: 34px;
   filter: drop-shadow(0 2px 14px rgba(183, 154, 97, 0.38));
+
+  @media (min-width: 640px) {
+    width: 88px;
+    height: 54px;
+  }
 }
 
 /* ── Ring paths ── */

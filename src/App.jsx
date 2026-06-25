@@ -7,6 +7,7 @@ import CoupleDetails from './components/CoupleDetails/CoupleDetails'
 import EventDetails from './components/EventDetails/EventDetails'
 import VenueDetails from './components/VenueDetails/VenueDetails'
 import ClosingMessage from './components/ClosingMessage/ClosingMessage'
+import AudioPlayer from './components/AudioPlayer/AudioPlayer'
 
 function App() {
   const [loaderFading, setLoaderFading] = useState(false)
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       {!loaderDone && <Loader fading={loaderFading} />}
+      <AudioPlayer />
       <div className="page-shell">
         <main className="page-main">
           <Hero />
