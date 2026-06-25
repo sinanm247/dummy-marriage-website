@@ -17,7 +17,7 @@
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  gap: 0;                   /* no gap between text card and image on mobile */
+  gap: 100px;
   align-items: center;
 
   @media (min-width: 768px) {
@@ -272,7 +272,7 @@
 /* ── Scroll hint — bottom-center of the text card ── */
 .hero__scroll-hint {
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
