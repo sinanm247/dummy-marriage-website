@@ -12,7 +12,7 @@ function VenueDetails() {
         <div className="venue__frame">
           <img
             src={venueImage}
-            alt="Wind Valley Resort venue"
+              alt="Al Noor Banquet Hall venue"
             className="venue__img"
             loading="lazy"
           />
@@ -31,7 +31,7 @@ function VenueDetails() {
               </span>
               <div className="venue__address-text">
                 <p className="venue__name serif">
-                  Wind Valley Resort, Pady, Cherkala
+                  Al Noor Banquet Hall, Calicut, Kerala
                 </p>
                 <p className="venue__subtext">
                   Join us in celebrating this blessed day
@@ -39,7 +39,7 @@ function VenueDetails() {
               </div>
             </div>
             <a
-              href="https://maps.app.goo.gl/X2FGej1f9mn3WhJ96"
+              href="https://maps.app.goo.gl/dummy"
               className="venue__map-btn"
               target="_blank"
               rel="noreferrer noopener"

@@ -5,8 +5,8 @@ import './AudioPlayer.scss'
 
 function AudioPlayer() {
   const audioRef = useRef(null)
-  // Driven entirely by the real audio play/pause events — never out of sync
-  const [isPlaying, setIsPlaying] = useState(false)
+  // Start optimistically as "playing" — browser autoplay or first-interaction will confirm
+  const [isPlaying, setIsPlaying] = useState(true)
 
   useEffect(() => {
     const audio = audioRef.current

@@ -15,15 +15,15 @@ function EventDetails() {
         <div className="event__card">
           <div className="event__cell">
             <p className="section-kicker event__label">Date</p>
-            <p className="event__value serif">Monday, 27th July 2026</p>
+            <p className="event__value serif">Friday, 15th August 2026</p>
           </div>
           <div className="event__cell">
             <p className="section-kicker event__label">Nikah</p>
-            <p className="event__value serif">5:00 PM</p>
+            <p className="event__value serif">2:00 PM</p>
           </div>
           <div className="event__cell">
             <p className="section-kicker event__label">Reception</p>
-            <p className="event__value serif">From 7:00 PM onwards</p>
+            <p className="event__value serif">From 6:00 PM onwards</p>
           </div>
         </div>
 

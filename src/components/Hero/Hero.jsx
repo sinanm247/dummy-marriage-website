@@ -1,6 +1,6 @@
 import { Gem } from 'lucide-react'
 import './Hero.scss'
-import heroImage from '../../assets/Images/Image-1.webp'
+import heroImage from '../../assets/Images/Image-1.png'
 import cornerSage from '../../assets/Vectors/corner-fill-sage.png'
 import cornerGold from '../../assets/Vectors/corner-fill-gold.png'
 import line1Gold from '../../assets/Vectors/line-1-gold.png'
@@ -28,13 +28,7 @@ function Hero() {
           </p>
 
           <div className="fade-up delay-2">
-            <h1 className="hero__name-1 serif">Ijju &amp; Ayshu</h1>
-            <div className="hero__divider">
-              <span className="hero__divider-line" />
-              <span className="hero__heart">♡</span>
-              <span className="hero__divider-line" />
-            </div>
-            <h2 className="hero__name-2 serif">Fida &amp; Lulu</h2>
+            <h1 className="hero__name-1 serif">Ibrahim &amp; Mariam</h1>
           </div>
 
           <p className="hero__tagline fade-up delay-3">
