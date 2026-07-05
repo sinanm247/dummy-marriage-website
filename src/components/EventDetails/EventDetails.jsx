@@ -15,7 +15,7 @@ function EventDetails() {
         <div className="event__card">
           <div className="event__cell">
             <p className="section-kicker event__label">Date</p>
-            <p className="event__value serif">Friday, 15th August 2026</p>
+            <p className="event__value serif">Monday, 27th July 2026</p>
           </div>
           <div className="event__cell">
             <p className="section-kicker event__label">Nikah</p>
